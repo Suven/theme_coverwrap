@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/foundation.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./modernizr.js"></script>
+</head>
+<body>
+	
+	<div class="sortwrap">
+		<ul class="sort">
+			<li class="active" data-by="added" data-dir="asc">Date added</li>
+			<li data-by="title" data-dir="asc">Title</li>
+			<li data-by="year" data-dir="asc">Year</li>
+		</ul>
+	</div>
+
+	<div class="details">
+
+		<div class="row">
+			<div class="columns small-12">
+
+				<h1><span class="title"></span> <small class="year"></small></h1>
+				<h4 class="tagline">Beyond darkness... beyond desolation... lies the greatest danger of all.</h4>
+
+				<div class="row">
+					<div class="columns small-6">
+						
+						<h5>Movie Details</h5>
+						<p class="genre"></p>
+						<p class="year"></p>
+						<p class="length"></p>
+						<p class="rating"></p>
+
+					</div>
+					<div class="columns small-6">
+
+						<h5>Director</h5>
+						<p class="director"></p>
+
+						<h5>Writer</h5>
+						<p class="writer marquee"></p>
+
+						<h5>Cast</h5>
+						<p class="cast marquee">
+
+					</div>
+				</div>
+
+				<h5>Plot</h5>
+				<p class="plot"></p>
+		
+			</div>
+		</div>
+
+	</div>
+
+	<div class="coverwrap">
+		<div class="cover">
+		</div>
+		<div class="mid"></div>
+	</div>
+
+	<script src="./data.js"></script>
+	<script src="./jquery-1.10.1.min.js"></script>
+	<script src="./jquery.lazyload.min.js"></script>
+	<script src="./jquery.marquee.min.js"></script>
+	<script src="./jquery-ui.js"></script>
+	<script src="./foundation.min.js"></script>
+	<script>
+    	$(document).foundation();
+  	</script>
+	<script src="./script.js"></script>
+</body>
+</html>

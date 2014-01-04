@@ -1,0 +1,16 @@
+{
+	"name": "coverwrap",
+	"version": "0.1.0",
+	"desc": "Like Posterwrap in Confluence. This theme is not responsive",
+	"features": [
+		"Basic sorting"
+	],
+	 "devDependencies": {
+	    "grunt": "~0.4.2",
+	    "grunt-contrib-uglify": "~0.2.2",
+	    "grunt-contrib-coffee": "~0.8.0",
+	    "grunt-contrib-less": "~0.8.0",
+	    "grunt-contrib-imagemin": "0.4.0",
+	    "grunt-contrib-watch": "0.5.3"
+  	}
+}
