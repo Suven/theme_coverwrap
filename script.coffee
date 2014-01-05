@@ -82,7 +82,9 @@ dateSort = (a, b) ->
 	genericSort(a.dateadded, b.dateadded)
 
 $ ->
-	console.log data[0]
+	$('.cover').css(
+		'width': "#{(data.length + 3) * 133}px"
+	)
 
 	$('.coverwrap').animate
 		scrollLeft: 0

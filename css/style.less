@@ -70,6 +70,8 @@ ul.sort {
 
 		&.active {
 			font-weight: bold;
+			padding-top: -1px;
+			padding-bottom: 1px;
 		}
 
 		&:hover {
@@ -80,7 +82,7 @@ ul.sort {
 		cursor: pointer;
 
 		display: inline-block;
-		margin: 0 -1px 0 0;
+		margin: -2px -1px 0 0;
 
 		background-color: rgba(255, 255, 255, 0.5);
 		box-shadow: 0 0 2px black;
@@ -93,6 +95,7 @@ ul.sort {
 
 		&:last-of-type {
 			border-radius: 0 0 5px 0;
+			margin-left: -1px;
 		}
 	}
 }
@@ -136,8 +139,6 @@ ul.sort {
 	display: inline-block;
 
 	height: 220px;
-
-	width: 90000px;
 
 	> .el {
 
