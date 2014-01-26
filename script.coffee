@@ -60,7 +60,7 @@ updateDetails = (id) ->
 		$('.details .writer').html getWriterList mov
 		$('.details .director').html mov.director.join(", ")
 		$('.details .country').html mov.country
-		$('.details .length').html "#{mov.runtime / 60} min"
+		$('.details .length').html "#{Math.round(mov.runtime / 60)} min"
 		$('.details .rating').html "Rating: #{mov.rating.toPrecision(3)}"
 		$('.details .id').html mov.movieid
 
