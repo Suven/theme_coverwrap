@@ -140,7 +140,38 @@ ul.sort {
 
 	height: 220px;
 
+	> .el > img.mid + .title {
+		opacity: 1;
+		-webkit-transition-delay: 3s;
+		-webkit-transition: opacity 0.4s;
+	}
+
 	> .el {
+		position: relative;
+
+		.title {
+			display: block;
+
+			position: absolute;
+			bottom: 5px;
+			left: 5px;
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 3px;
+			border-radius: 2px;
+			width: 124px;
+			font-size: 12px;
+			height: 18px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			text-align: center;
+
+			z-index: 99;
+
+			opacity: 0;
+			-webkit-transition: opacity 0.2s;
+		}
 
 		margin: 10px -7px;
 		padding: 0;
@@ -181,7 +212,7 @@ ul.sort {
 				-webkit-transition: all 0.4s;
 				transition: all 0.4s;
 
-				z-index: 99;
+				z-index: 80;
 			}
 		}
 

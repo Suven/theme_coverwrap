@@ -24,7 +24,7 @@ updateList = (skip) ->
 		else
 			eclass = ""
 
-		$('.cover').append """<section data-id="#{mov.movieid}" class="el pos-#{i++}"><img src="./poster.png" class="#{eclass}" data-original="./thumbs/#{mov.movieid}.jpg" /></section>"""
+		$('.cover').append """<section data-id="#{mov.movieid}" class="el pos-#{i++}"><img src="./poster.png" class="#{eclass}" data-original="./thumbs/#{mov.movieid}.jpg" /><div class="title">#{mov.label}</div></section>"""
 
 	$('.cover > .el > img').lazyload
 	    container: $(".coverwrap")
