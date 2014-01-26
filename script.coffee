@@ -83,7 +83,7 @@ dateSort = (a, b) ->
 
 $ ->
 	$('.cover').css(
-		'width': "#{(data.length + 3) * 133}px"
+		'width': "#{(data.length + 5) * 120}px"
 	)
 
 	$('.coverwrap').animate
