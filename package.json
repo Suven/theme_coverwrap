@@ -2,6 +2,11 @@
 	"name": "coverwrap",
 	"version": "0.1.0",
 	"desc": "Like Posterwrap in Confluence. This theme is not responsive",
+	"author": "Suven",
+	"url": "http://github.com/suven/coverwrap",
+	"cover": {
+		"prefferedWidth": 136
+	},
 	"features": [
 		"Basic sorting"
 	],
