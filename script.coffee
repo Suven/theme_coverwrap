@@ -69,17 +69,40 @@ updateDetails = (id) ->
 		pauseOnHover: true
 
 genericSort = (a, b) ->
-	return 0 if a is b
-	a > b ? 1 : -1
+	if a < b
+		return -1
+	else
+		return 1
+	return 0
 
-titleSort = (a, b) ->
+labelSort = (a, b) ->
 	genericSort(a.label, b.label)
 
 yearSort = (a, b) ->
 	genericSort(a.year, b.year)
 
-dateSort = (a, b) ->
+dateaddedSort = (a, b) ->
 	genericSort(a.dateadded, b.dateadded)
+
+lastCol = 'added'
+lasOrdAsc = true
+sortDataBy = (colName) ->
+
+	if lastCol is colName
+		order = if lasOrdAsc then 'desc' else 'asc'
+		lasOrdAsc = !lasOrdAsc
+	else
+		lasOrdAsc = false
+
+	lastCol = colName
+
+	switch colName
+		when 'label' then data.sort labelSort
+		when 'year' then data.sort yearSort
+		when 'dateadded' then data.sort dateaddedSort
+
+	if order is 'desc'
+		data.reverse()
 
 $ ->
 	$('.cover').css(
@@ -95,23 +118,14 @@ $ ->
 		height: window.innerHeight - 220
 	)
 
-	$('ul.sort li').click ->
-
-		switch $(@).data('by')
-			when 'title' then data.sort titleSort
-			when 'year' then data.sort yearSort
-			when 'added' then data.sort dateSort
-
-		sort = $(@).data('dir')
-		if $(@).data('by') is $('ul.sort li.active').first().data('by')
-			sort = if sort is 'asc' then 'desc' else 'asc'
-
-		if sort is 'desc'
-			data.reverse()
+	$('ul.sort li').click (e) ->
+		e.preventDefault()
 
 		$('ul.sort li.active').removeClass 'active'
 		$(@).addClass 'active'
-		$(@).data('dir', sort)
+
+		sortCol = $(@).data('sort')
+		sortDataBy sortCol
 
 		updateList()
 
